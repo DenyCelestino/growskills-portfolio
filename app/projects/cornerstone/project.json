@@ -1,0 +1,10 @@
+{
+    "title": "Cornerstone",
+    "ipadImage" : {
+        "url": "/projects/cornerstone/images/overview.jpg"
+    },
+    "images": [
+        {"url": "/projects/cornerstone/images/overview.jpg"},
+        {"url": "/projects/cornerstone/images/overview.jpg"}
+    ]
+}

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "VaryloopSolid";
+    src: url('webFonts/VaryloopSolid/font.woff2') format('woff2'), url('webFonts/VaryloopSolid/font.woff') format('woff');
+}
+  
+$html-font-size: 16px;
+
+// Colors
+$color-black: #030B2D;
+$color-white: #fff;
+$color-purple: #9AB6FF;
+
+
+// Fonts
+$font-family-default: 'brandon-grotesque', sans-serif;
+$font-family-title: 'VaryloopSolid', sans-serif;

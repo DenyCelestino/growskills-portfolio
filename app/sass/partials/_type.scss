@@ -1,0 +1,117 @@
+h1, h2, h3, h4{
+    font-family: $font-family-title;
+    line-height: 1;
+    font-weight: 400;
+    color: $color-white;
+    // mix-blend-mode: overlay;
+}
+
+h2, h3, h4{
+    margin-bottom: remToPx(10px);
+}
+
+h1{
+    font-size: remToPx(60px);
+    margin-bottom: remToPx(55px);
+    @include breakpoint-tablet {
+        font-size: remToPx(85px);
+    }
+    @include breakpoint-desktop-small {
+        font-size: 10vw;
+    }
+}
+
+h2{
+    font-size: remToPx(32px);
+    margin-bottom: remToPx(10px);
+}
+
+h3{
+    font-size: remToPx(40px); 
+    @include breakpoint-tablet {
+        font-size: remToPx(60px);
+        margin-bottom: 30px;
+    }
+    @include breakpoint-desktop-small {
+        font-size: remToPx(80px);
+        margin-bottom: 40px;
+    }
+}
+
+h4{
+    font-size: remToPx(22px);
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+.text-container {
+    p, ul, ol,
+    blockquote,
+    .embed-container,
+    .wp-caption {
+        font-size: remToPx(22px);
+        line-height: remToPx(28px);
+        margin-bottom: remToPx(24px);
+        max-width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul, ol {
+        position: relative;
+        list-style: none;
+
+        li:not(.gfield) {
+            padding-left: 1.25em;
+
+            &::before {
+                position: absolute;
+                text-indent: -1.25em;
+            }
+        }
+    }
+
+    ul {
+        li:not(.gfield) {
+            &::before {
+                content: '•';
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ol-counter;
+
+        li {
+            counter-increment: ol-counter;
+
+            &::before {
+                content: counter(ol-counter) '.';
+            }
+        }
+    }
+
+    a{
+        &:not(.btn){
+            &:hover{
+                color: $color-black;
+            }    
+        }
+        
+    }
+
+    blockquote {
+        padding-left: 1em;
+        font-size: 1.4em;
+        line-height: 1.2;
+        border-left: .1rem solid currentColor;
+    }
+}

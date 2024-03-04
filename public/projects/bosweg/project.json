@@ -1,0 +1,15 @@
+{
+    "title": "Bosweg Hulpverlening",
+    "ipadImage" : {
+        "url": "/projects/bosweg/images/home-bosweg.jpg"
+    },
+    "text": [
+        {"title": "Title Bosweg lorem ipsum dolor sit amet para sir dolor"},
+        {"text": "Text bosweg Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."},
+        {"url": "https://site.co.mz"},
+        {"urlLabel": ""}
+    ],
+    "images": [
+        {"url": "/projects/bosweg/images/girl.jpg"}
+    ]
+}
