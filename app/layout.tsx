@@ -10,6 +10,7 @@ import Bubbles from "./components/bubbles";
 import Footer from "./components/footer";
 import Link from "next/link";
 import Animation from "./components/animation/page";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,10 @@ export default function RootLayout({
           <Header />
           <Player />
           <div id="content-container">
-            <div className="content-grid">{children}</div>
+            <div className="content-grid">
+              {children}
+              <NextTopLoader />
+            </div>
           </div>
           <Footer />
           <Dolphin />
