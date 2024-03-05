@@ -9,10 +9,27 @@
   .wrapper{
     max-width: remToPx(1500px);
   }
+  &.hero-absolute{
+    position: absolute;
+    mix-blend-mode: normal;
+  }
+  &.hero-project{
+    transform: translateY(0);
+    width: 100vw;
+  }
+}
+
+.hero-title-home{
+  min-height: 100vh;
+  .btn{
+    background: $color-white;
+    border-width: 0;
+    color: $color-black;
+  }
 }
 
 .project-overview{
-  transform: translateY(100vh);
+  // transform: translateY(100vh);
   .wrapper{
     @include grid-layout(1);
   }
@@ -140,6 +157,14 @@
 
 .project-item{
   // transform: translateY(100px);
+  margin-top: 0;
+}
+
+.project-item-image{
+  max-width: 1200px;
+  > img{
+    border-radius: 60px!important;
+  }
 }
 
 .project-item-images{
@@ -147,20 +172,42 @@
   background: linear-gradient(320deg, rgba(138,170,253,1) 0%, rgba(172,196,253,1) 100%);
 }
 
-.project-item-image{
+.project-item-images-wrapper{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include breakpoint-desktop-medium {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.project-item-images-image{
+  @include breakpoint-desktop-medium {
+    width: calc(60% - 20px);
+  }
+  &:nth-child(2), &:nth-child(3){
+    @include breakpoint-desktop-medium {
+      width: calc(40% - 20px);
+    }
+  }
+}
+
+.ipad-image-wrapper{
   position: relative;
   margin: 0 auto;
-  @include breakpoint-tablet {
-    width: 80%;
-  }
   > img{
     display: block;
     width: 100%;
     height: auto;
+    box-shadow: 15px 10px 50px 0px rgba(0,0,0,0.6);
+    border-radius: 32px;
   }
 }
 
-.project-item-image-image{
+.ipad-image-image{
   position: absolute;
   top: 15px;
   left: 20px;
@@ -173,6 +220,7 @@
     left: 33px;
     height: calc(100% - 64px);
     width: calc(100% - 65px);
+    border-radius: 15px;
   }
 }
 
@@ -209,7 +257,7 @@
 .dolphin{
   display: none;
   @include breakpoint-desktop-small {
-    animation: dolphin 5s ease-in-out 0s infinite alternate;
+    animation: dolphin 3s ease-in-out 0s infinite alternate;
     display: block;
     position: fixed;
     top: 30vh;
@@ -230,23 +278,11 @@
 }
 
 @keyframes dolphin {
-  0%{
+  from{
     transform: rotate(-5deg);
   }
-  20%{
-    transform: rotate(-15deg);
-  }
-  40%{
+  to{
     transform: rotate(-10deg);
-  }
-  60%{
-    transform: rotate(-15deg);
-  }
-  80%{
-    transform: rotate(-10deg);
-  }
-  100%{
-    transform: rotate(-5deg);
   }
 }
 
@@ -260,5 +296,5 @@
   filter: contrast(180%) brightness(100%);  
   mix-blend-mode: overlay;
   pointer-events: none;
-  opacity: 50%;
+  opacity: 100%;
 }

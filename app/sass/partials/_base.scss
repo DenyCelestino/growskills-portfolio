@@ -18,7 +18,7 @@ html {
 
 body{
     position: relative;
-    background: rgba(3,11,45,1);
+    background: #000313;
     min-height: 100vh;
     color: $color-white;
     .body-gradient{
@@ -26,10 +26,10 @@ body{
         top: -50%;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 150%;
         background: rgb(32,79,183);
-        background: radial-gradient(circle, rgba(32,79,183,1) 0%, rgba(9,25,73,1) 70%, rgba(3,11,45,1) 100%);
-        opacity: 80%;
+        background: radial-gradient(circle, rgba(32,79,183,1) 0%, rgba($color-black, 1) 70%, rgba($color-black, 1) 100%);
+        opacity: 100%;
     }
 }
 

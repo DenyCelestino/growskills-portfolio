@@ -20,7 +20,7 @@ const Project = ({ params }: { params: { name: string } }) => {
         <div className="project-item-image">
           <img src={"/ipad.png"} alt={"ipad"} />
           {data?.images.map((item, index) => (
-            <div className="project-item-image-image cover-image" key={index}>
+            <div className="project-item-image cover-image" key={index}>
               <img src={item.url} alt={item.url} />
             </div>
           ))}

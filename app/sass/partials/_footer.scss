@@ -1,12 +1,39 @@
+.btn.whatsapp{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    padding-left: 70px;
+    z-index: 100;
+    border: medium none;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 50px;
+        height: 50px;
+        background: $color-white url(images/phone.svg) no-repeat center center;
+        background-size: 16px 16px;
+        border-radius: 100%;
+    }
+}
+
 footer{
     position: relative;
-    height: 100vh;
-    video{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        mix-blend-mode: overlay;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo{
+        width: 127px;
+        height: 80px;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
     }
 }

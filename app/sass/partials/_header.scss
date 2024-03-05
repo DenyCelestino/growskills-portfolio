@@ -5,26 +5,26 @@ header{
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: remToPx(10px) remToPx(20px) 0;
+    padding: remToPx(20px) remToPx(30px) 0;
     height: remToPx(60px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
+    mix-blend-mode: overlay;
 
     @include breakpoint-desktop-small{
         height: auto;
     }    
 }
 
-.header-logo{
+.logo{
     transition: all 0.3s ease-in-out;
     display: block;
     width: remToPx(50px);
     height: remToPx(32px);
     background: url(images/logo.svg) no-repeat 0 0;
     background-size: contain;
-    background-blend-mode: overlay;
 }
 
 /* The switch - the box around the slider */
