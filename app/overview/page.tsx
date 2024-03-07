@@ -64,7 +64,9 @@ const Overview = () => {
       width: "100vw",
       height: "100vh",
       onComplete: () => {
-        newImg.remove();
+        setTimeout(() => {
+          newImg.remove();
+        }, 900);
       },
     });
     gsap.to(".hero-title", {
