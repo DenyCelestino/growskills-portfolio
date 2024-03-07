@@ -99,7 +99,7 @@ const Overview = () => {
       </section>
       <section className="project-overview">
         {Projects.map((item, index) => (
-          <div key={index} className="project-overview-item">
+          <div data-aos="fade-up" key={index} className="project-overview-item">
             <div className="project-overview-item-image">
               <img className="ipad-bg" src="/ipad.png" alt="" />
               <div className="project-img cover-image">
