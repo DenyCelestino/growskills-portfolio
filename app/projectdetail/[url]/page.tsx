@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+
 import Projects from "../../overview/content.json";
 const Project = ({ params }: { params: { url: string } }) => {
   const url = decodeURI(params.url);
@@ -7,8 +8,10 @@ const Project = ({ params }: { params: { url: string } }) => {
   const data = Projects.find((item) => item.url === url);
   return (
     <>
-      <section  className="hero-title hero-absolute hero-project">
-        <h1 data-aos="fade-down">{data?.title}</h1>
+      <section className="hero-title hero-absolute hero-project">
+        <h1 data-aos="fade-up">
+          {data?.title}
+        </h1>
       </section>
 
       <div
@@ -21,7 +24,7 @@ const Project = ({ params }: { params: { url: string } }) => {
           height: "100vh",
         }}
       >
-        <img data-aos="zoom-in" data-aos-duration="800" src={data?.image.url} alt={data?.title} />
+        <img src={data?.image.url} alt={data?.title} />
         <div
           className="project-img-bg"
           style={{
@@ -35,10 +38,10 @@ const Project = ({ params }: { params: { url: string } }) => {
       </div>
 
       <section className="project-item with-margin">
-        <div data-aos="zoom-in-up" data-aos-duration="600" className="project-item-image ipad-image-wrapper">
+        <div className="project-item-image ipad-image-wrapper">
           <img src="/ipad.png" alt="ipad" />
           <div className="project-item-image-image ipad-image-image cover-image">
-            <img  src={data?.ipadImage.url} alt="ipad" />
+            <img src={data?.ipadImage.url} alt="ipad" />
           </div>
         </div>
       </section>
@@ -63,11 +66,10 @@ const Project = ({ params }: { params: { url: string } }) => {
             {data?.images?.map((item, index) => (
               <div
                 key={index}
-                data-aos="zoom-in-up"
                 className="project-item-images-image ipad-image-wrapper"
               >
                 <img src="/ipad.png" alt="ipad" />
-                <div   className="ipad-image-image cover-image">
+                <div className="ipad-image-image cover-image">
                   <img src={item.url} alt="ipad" />
                 </div>
               </div>

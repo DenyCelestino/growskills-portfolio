@@ -606,7 +606,7 @@ input:checked + .slider:before {
   mix-blend-mode: normal;
 }
 .hero-title.hero-project {
-  transform: translateY(0);
+  transform: translateY(30%);
   width: 100vw;
 }
 
