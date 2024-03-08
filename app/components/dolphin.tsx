@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DolphinImage from "../images/dolphin.png";
+import React from "react";
 
 const Dolphin = () => {
   return (
