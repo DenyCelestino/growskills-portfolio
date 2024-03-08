@@ -20,16 +20,23 @@ export default function Home() {
     gsap.to(".hero-title", {
       y: 0,
     });
+
+    if ("serviceWorker" in navigator) {
+      const handleServiceWorker = async () => {
+        await navigator.serviceWorker.register("/service-worker.js");
+      };
+      handleServiceWorker();
+    }
   }, []);
 
-  const handleNavigate = () =>{
-    navigate.push('/overview')
-  }
+  const handleNavigate = () => {
+    navigate.push("/overview");
+  };
   const onClick = () => {
     gsap.to(".hero-title", {
       y: "-110%",
-      duration:0.5,
-      onComplete:handleNavigate
+      duration: 0.5,
+      onComplete: handleNavigate,
     });
   };
 

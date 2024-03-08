@@ -1,13 +1,11 @@
-'use client'
+"use client";
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const Player = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isCheck, setIsCheck] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
- 
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsCheck(e.target.checked);
@@ -26,7 +24,7 @@ const Player = () => {
 
   return (
     <label className="switch">
-      <audio ref={audioRef} src={'/water.mp3'} />
+      <audio ref={audioRef} src={"/water.mp3"} />
       <input
         type="checkbox"
         checked={isCheck}
