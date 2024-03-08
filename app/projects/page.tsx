@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import React from "react";
 import Projects from "./content.json";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
