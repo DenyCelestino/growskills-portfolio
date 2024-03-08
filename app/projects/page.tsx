@@ -83,7 +83,7 @@ const Overview = () => {
       opacity: 0,
       onComplete: () => {
         window.scrollTo({ top: 0, behavior: "instant" });
-        navigate.push("/projectdetail/" + Projects[index].url);
+        navigate.push("/project/" + Projects[index].url);
       },
     });
   };

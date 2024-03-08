@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   const handleNavigate = () => {
-    navigate.push("/overview");
+    navigate.push("/projects");
   };
   const onClick = () => {
     gsap.to(".hero-title", {

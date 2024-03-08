@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-import Projects from "../../overview/content.json";
+import Projects from "../../projects/content.json";
 const Project = ({ params }: { params: { url: string } }) => {
   const url = decodeURI(params.url);
 
